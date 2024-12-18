@@ -15,7 +15,7 @@ async function status(request, response){
     values: [databaseName]
   });// SELECT count(*)::int from pg_stat_activity WHERE datname = 'local_db';
   const databaseOpenedConectionsResultValue = databaseOpenedConectionsResult.rows[0].count;
-  console.log(databaseOpenedConectionsResultValue)
+
 
   response.status(200).json(
     {
